@@ -22,37 +22,44 @@
   <body>
     <main class="container-fluid">
       <div class="container-fluid container-xxl">
-        <div class="wrapper px-0 row border-3 px-lg-4">
-          <header class="head">
+        <div class="wrapper container">
+          <header class="head align-items-center">
             <div class="logo col-6">
-              <img class="mx-3" src="./asset/img/logo4.png" alt="" />
+              <img class="py-1 px-5" src="./asset/img/logo4.png" alt="" />
             </div>
-            <div class="list col-6">
+            <div class="list col-md-8 col-lg-6 w-100">
               <div class="menu d-none d-md-block">
-                <ul class="">
-                  <li class="w-25 justify-content-end">
+                <ul class="row  m-0 p-0 border">
+                  <li class="col-lg col-md-1 justify-content-center border ">
                     <a href="">Home</a>
                   </li>
-                  <li class="w-25 justify-content-center">
+                  <li class="col-lg col-md-1 justify-content-center border">
                     <a href="">about</a>
                   </li>
-                  <li class="w-25 justify-content-start">
+                  <li class="col-lg col-md-1 justify-content-center border">
                     <a href="">services</a>
                   </li>
-                  <li class="w-25 justify-content-start">
+                  <li class="col-lg col-md-1 justify-content-center border">
                     <a href="">portfolio</a>
                   </li>
-                  <li class="justify-content-start">
+                  <li class="col-lg col-md-1 justify-content-center border">
                     <a href="">blog</a>
                   </li>
-                  <li class="w-25 justify-content-start">
+                  <li class="col-lg col-md-1 justify-content-start border">
                     <a href="">contact</a>
                   </li>
                 </ul>
               </div>
-              <div class="listIcon d-md-none">
-                <span>Menu<i class="bi bi-list"></i></span>
-              </div>
+              <button class="listIcon col-7 text-white d-md-none mx-5">
+                <span class="col-12 bg-dark d-flex justify-content-end">Menu<i class="bi bi-list  mx-2"></i></span>
+                <ul class="submenu w-100 container d-md-none">
+                  <li class="row p-2"><a href="">home</a></li>
+                  <li class="row p-2"><a href="">about</a></li>
+                  <li class="row p-2"><a href="">servicess</a></li>
+                  <li class="row p-2"><a href="">portfolio</a></li>
+                  <li class="row p-2"><a href="">contact</a></li>
+                </ul>
+              </button>
             </div>
           </header>
         </div>
