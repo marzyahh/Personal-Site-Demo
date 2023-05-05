@@ -45,7 +45,7 @@ main .wrapper .head > .logo > img {
 }
 main .wrapper .head > .list .listIcon {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 4vw;
   cursor: pointer;
 }
 main .wrapper .head > .list .listIcon > .submenu {
@@ -78,10 +78,9 @@ main .wrapper .head > .list .listIcon:focus > .submenu {
 main .wrapper .head > .list .listIcon > span {
   line-height: 60px;
   display: flex;
-  box-shadow: 0 1px 3px black;
 }
 main .wrapper .head > .list .listIcon > span > i {
-  font-size: 50px;
+  font-size: 10vw;
 }
 main .wrapper .head > .list > .menu > ul > li {
   list-style-type: none;
