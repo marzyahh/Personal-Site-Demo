@@ -3,20 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: fonts;
+  src: url(../fonts/Poppins-Black.ttf);
+}
 body {
   width: 100%;
   height: 100vh;
-  //   background-image: url(../img/bg.png);
+  background-image: url(../img/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  @font-face {
-    font-family: fonts;
-    src: url(../fonts/Poppins-Black.ttf);
-  }
+  position: relative;
 }
 main {
   .wrapper {
-    border: 1px solid blue;
     @media screen and (max-width: 575px) {
       width: 100%;
       padding: 0;
@@ -116,7 +116,154 @@ main {
       }
     }
   }
+  .btnsLink>.btn{
+    @for $i from 1 through 6{
+      &:nth-of-type(#{$i})>a{
+        top: ($i*5 + 40%);
+      }
+    }
+    &:focus>a{
+      background-color: #f9004d;
+    }
+  
+    >a{
+      width: 10px;height: 10px;
+      border: 1px solid red;
+      border-radius: 50%;
+      position: absolute;
+      display: flex; 
+      cursor: pointer;
+    z-index: 777;
+      right: 2%;
+      overflow: hidden;
+    }
+  }
+  
+  
+  // Home page
+  .home{
+    position: absolute;
+    top: 0;left: 0;
 
+    >.img{
+      @media screen and (max-width: 575px) {
+       display: none;
+      }
+      position: relative;
+      display: flex;
+      padding-right: 100px;
+      >div:nth-of-type(1){
+        width: 200px;
+        height: 220px;
+        background-color: rgb(199, 73, 94);
+        clip-path: circle(150px at 0 0);
+        opacity: 0;
+        animation: mov1 linear alternate infinite 1s;
+      }
+      @keyframes mov1 {
+        to{
+          opacity: 1;
+        }
+        
+      }
+      >div:nth-of-type(2){
+        content: '';
+        display: flex;
+        position: absolute;
+        top: -100px;
+        left: -90px;
+        width: 300px;
+        height: 300px;
+        clip-path: circle(150px at center);
+        background-color: rgba(240, 125, 135, 0.683);
+        opacity: 0;
+        animation: mov2 alternate infinite 1s;
+        
+      }
+      @keyframes mov2 {
+        to{
+          opacity: 1;
+        }
+        
+      }
+      >div:nth-of-type(3){
+        content: '';
+        display: flex;
+        position: absolute;
+        top: -200px;
+        left: -200px;
+        width: 500px;
+        height: 500px;
+        clip-path: circle(250px at center);
+        background-color: rgba(237, 183, 188, 0.537);
+        opacity: 0;
+        animation: mov1 linear alternate infinite 1s;
+      }
+      @keyframes mov3 {
+        to{
+          opacity: 1;
+        }
+        
+      }
+      >img{
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        object-position: right bottom;
+        // width: 25%;
+        height: 100%;
+        
+      }
+      
+    }
+    .description{
+      margin-top: 140px;
+      >*{
+        font-family: fonts, sans-serif;
+      }
+      >h1{
+        font-size: 32px;
+        font-weight: 800;
+        color: #f9004d;
+        text-transform: capitalize;
+        width: 0;
+        overflow: hidden;
+        animation: desc steps(19) alternate infinite 5s, opDesc .4s alternate infinite;
+        white-space:nowrap;
+        border-right: 1px solid #f9004d;
+      }
+      h2{
+        font-weight: bold;
+        font-size: 52px;
+      }
+      >button{
+        height: 50px;
+        width: 195px;
+        background: linear-gradient(
+          to right,
+          rgb(247, 30, 6),
+          rgb(239, 9, 103)
+        );
+        font-size: 21px;
+        transition: .4s;
+        
+        &:hover>span{
+          background: rgba(255, 255, 255, 0.286);
+        }
+      }
+      @keyframes desc {
+        to{
+          width: 380px;
+        }
+      }
+      @keyframes opDesc {
+        to{
+           border-right: 1px solid rgba(0, 0, 0, 0) ;
+        }
+        
+      }
+    }
+  }
   .servicess {
     background-color: rgb(247, 247, 247);
     height: auto;
