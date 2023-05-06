@@ -3,10 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-@font-face {
-  font-family: fonts;
-  src: url(../fonts/Poppins-Black.ttf);
-}
+
 body {
   width: 100%;
   height: 100vh;
@@ -14,6 +11,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  @font-face {
+    font-family: fonts;
+    src: url(../fonts/Poppins-Black.ttf);
+  }
 }
 main {
   .wrapper {
@@ -117,26 +118,33 @@ main {
     }
   }
   .btnsLink>.btn{
+    &:focus>a{
+      background-color: #f9004d;
+  }
     @for $i from 1 through 6{
       &:nth-of-type(#{$i})>a{
         top: ($i*5 + 40%);
       }
     }
-    &:focus>a{
-      background-color: #f9004d;
-    }
-  
-    >a{
+     >a{
       width: 10px;height: 10px;
       border: 1px solid red;
       border-radius: 50%;
       position: absolute;
       display: flex; 
+      flex-wrap: wrap;
       cursor: pointer;
     z-index: 777;
       right: 2%;
       overflow: hidden;
-    }
+
+     }
+      // &:nth-of-type(1)>div{
+      //   z-index: 8888;
+      // }
+      // &:nth-of-type(2):focus  .home{
+      //   visibility: hidden;
+      //  }
   }
   
   
@@ -146,7 +154,7 @@ main {
     top: 0;left: 0;
 
     >.img{
-      @media screen and (max-width: 575px) {
+      @media screen and (max-width: 768px) {
        display: none;
       }
       position: relative;
@@ -231,10 +239,18 @@ main {
         animation: desc steps(19) alternate infinite 5s, opDesc .4s alternate infinite;
         white-space:nowrap;
         border-right: 1px solid #f9004d;
+        @media (min-width: 768px) {
+          @keyframes desc {
+        to{
+          width: 100px;
+          font-size: 20px;
+        }
+        }
       }
+    }
       h2{
         font-weight: bold;
-        font-size: 52px;
+        font-size: 48px;
       }
       >button{
         height: 50px;
@@ -256,6 +272,14 @@ main {
           width: 380px;
         }
       }
+      @media screen and (max-width: 575px) {
+        @keyframes desc {
+          to{
+            width: 250px;
+            font-size: 20px;
+          }
+        }
+      }
       @keyframes opDesc {
         to{
            border-right: 1px solid rgba(0, 0, 0, 0) ;
@@ -264,6 +288,12 @@ main {
       }
     }
   }
+    // About Page
+  .about{
+      background-color: yellow;
+      margin-top: 150px;
+      visibility: hidden;
+    }
   .servicess {
     background-color: rgb(247, 247, 247);
     height: auto;
@@ -317,6 +347,8 @@ main {
       }
     }
   }
+
+
 
   // Services
 

@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: fonts;
-  src: url(../fonts/Poppins-Black.ttf);
-}
 body {
   width: 100%;
   height: 100vh;
@@ -15,6 +11,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+@font-face {
+  body {
+    font-family: fonts;
+    src: url(../fonts/Poppins-Black.ttf);
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -98,6 +100,9 @@ main .wrapper .head > .list > .menu > ul > li > a {
 main .wrapper .head > .list > .menu > ul > li > a:hover {
   color: black;
 }
+main .btnsLink > .btn:focus > a {
+  background-color: #f9004d;
+}
 main .btnsLink > .btn:nth-of-type(1) > a {
   top: 45%;
 }
@@ -116,9 +121,6 @@ main .btnsLink > .btn:nth-of-type(5) > a {
 main .btnsLink > .btn:nth-of-type(6) > a {
   top: 70%;
 }
-main .btnsLink > .btn:focus > a {
-  background-color: #f9004d;
-}
 main .btnsLink > .btn > a {
   width: 10px;
   height: 10px;
@@ -126,6 +128,7 @@ main .btnsLink > .btn > a {
   border-radius: 50%;
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   cursor: pointer;
   z-index: 777;
   right: 2%;
@@ -141,7 +144,7 @@ main .home > .img {
   display: flex;
   padding-right: 100px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   main .home > .img {
     display: none;
   }
@@ -242,9 +245,23 @@ main .home .description > h1 {
   white-space: nowrap;
   border-right: 1px solid #f9004d;
 }
+@media (min-width: 768px) {
+  @-webkit-keyframes desc {
+    to {
+      width: 100px;
+      font-size: 20px;
+    }
+  }
+  @keyframes desc {
+    to {
+      width: 100px;
+      font-size: 20px;
+    }
+  }
+}
 main .home .description h2 {
   font-weight: bold;
-  font-size: 52px;
+  font-size: 48px;
 }
 main .home .description > button {
   height: 50px;
@@ -266,6 +283,20 @@ main .home .description > button:hover > span {
     width: 380px;
   }
 }
+@media screen and (max-width: 575px) {
+  @-webkit-keyframes desc {
+    to {
+      width: 250px;
+      font-size: 20px;
+    }
+  }
+  @keyframes desc {
+    to {
+      width: 250px;
+      font-size: 20px;
+    }
+  }
+}
 @-webkit-keyframes opDesc {
   to {
     border-right: 1px solid rgba(0, 0, 0, 0);
@@ -275,6 +306,11 @@ main .home .description > button:hover > span {
   to {
     border-right: 1px solid rgba(0, 0, 0, 0);
   }
+}
+main .about {
+  background-color: yellow;
+  margin-top: 150px;
+  visibility: hidden;
 }
 main .servicess {
   background-color: rgb(247, 247, 247);
