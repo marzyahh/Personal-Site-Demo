@@ -23,6 +23,7 @@
     <main class="container-fluid">
       <div class="container-fluid container-xxl">
         <div class="head"></div>
+        <div class="btnLink"></div>
 
         <!-- Porfolio -->
         <div class="portfolio mt-5 pt-5 row">
@@ -195,7 +196,19 @@
   <script>
     $(function () {
       $(".head").load("index-header.html");
-      // $("#footer").load("footer.html");
+      $(".btnLink").load("index-btnLink.html");
     });
+  </script>
+  <script>
+    window.addEventListener('scroll', function() {
+  var scrollPos = window.scrollY;
+  var windowHeight = window.innerHeight;
+  var documentHeight = document.body.clientHeight;
+
+  if (scrollPos + windowHeight >= documentHeight) {
+    // Navigate to the next page
+    window.location.href = 'index-contact.html';
+  }
+});
   </script>
 </html>
