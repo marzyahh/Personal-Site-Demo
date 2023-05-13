@@ -618,8 +618,9 @@ main .contact > footer .social > ul > li > a {
   border: 1px solid transparent;
   color: #fff;
   transition: 0.4s;
+  border-radius: 50%;
 }
-bdrs50p main .contact > footer .social > ul > li > a:hover {
+main .contact > footer .social > ul > li > a:hover {
   background-color: #fff;
   border: 1px solid red;
   color: #151616;

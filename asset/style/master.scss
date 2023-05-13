@@ -602,7 +602,8 @@ main {
               border: 1px solid transparent;
               color: #fff;
               transition: 0.4s;
-              bdrs50p &:hover {
+              border-radius: 50%;
+               &:hover {
                 background-color: #fff;
                 border: 1px solid red;
                 color: #151616;
