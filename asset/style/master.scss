@@ -7,7 +7,7 @@
 body {
   width: 100%;
   // height: 100vh;
-  position: relative;
+  // position: relative;
   overflow-x: hidden;
   @font-face {
     font-family: fonts;
@@ -16,6 +16,8 @@ body {
 }
 main {
   // height: 100vh;
+  position: relative;
+
   .wrapper {
     @media screen and (max-width: 575px) {
       width: 100%;
@@ -31,7 +33,7 @@ main {
       height: 75px;
       display: flex;
       justify-content: space-between;
-      position: relative;
+      // position: relative;
 
       > .logo {
         height: 100%;
@@ -115,35 +117,36 @@ main {
       }
     }
   }
-  .btnsLink > .btn {
-    &:focus > a {
-      background-color: #f9004d;
-    }
-    @for $i from 1 through 6 {
-      &:nth-of-type(#{$i}) > a {
-        top: ($i * 5 + 40%);
-      }
-    }
-    > a {
+
+  .btnsLink{
+    position: absolute;
+    right: 3%;
+    >a{
       width: 10px;
       height: 10px;
       border: 1px solid red;
       border-radius: 50%;
       position: absolute;
+      top: 100px;
       display: flex;
       flex-wrap: wrap;
       cursor: pointer;
       z-index: 777;
-      right: 2%;
       overflow: hidden;
+      &:focus {
+        background-color: #f9004d;
+      }
+      @for $j from 1 to 6 {
+        &:nth-of-type(#{$j}){
+                margin-top: ($j * 30 + 100px);
+          }
+          >button{
+            display: none;
+          }
+        }
+      }
     }
-    // &:nth-of-type(1)>div{
-    //   z-index: 8888;
-    // }
-    // &:nth-of-type(2):focus  .home{
-    //   visibility: hidden;
-    //  }
-  }
+
 
   // Home page
   .home {
@@ -156,7 +159,7 @@ main {
     height: 100vh;
 
     > figure {
-      >img{
+      > img {
         object-fit: contain;
       }
       position: relative;
@@ -245,7 +248,6 @@ main {
             }
           }
         }
-     
       }
       h2 {
         font-weight: bold;
@@ -304,7 +306,7 @@ main {
           margin-top: 34px;
         }
         > img {
-          object-fit: cont;
+          object-fit: contain;
         }
       }
       .txt {
@@ -502,35 +504,30 @@ main {
     }
   }
 
+  // Portfolio
   .portfolio {
     > .projects {
-      >div > figure {
-        // border: 1px solid red;
-        // width: 350px;
+      > div > figure {
         cursor: pointer;
         transition: 0.4s;
         height: 240px;
         display: flex;
         position: relative;
-        >img{
+        > img {
           object-fit: cover;
-      
-        height: 100%;
-        border-radius: 20px;
 
+          height: 100%;
+          border-radius: 20px;
         }
         &:hover {
-          // width: 100%;
           transform: scale(1.2);
         }
-
         > figcaption {
           background-color: rgba(104, 100, 100, 0.486);
           border-radius: 10px;
           position: absolute;
           bottom: 20%;
           left: 12%;
-
           > ul {
             > li {
               border-radius: 50%;
@@ -542,6 +539,82 @@ main {
                   display: flex;
                   color: blue;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Contact
+  .contact {
+    > div:nth-of-type(2) > div {
+      background-color: #fffafa;
+      border: 1px solid rgb(211, 204, 204);
+      transition: 0.4s;
+      &:hover {
+        border: 1px solid #f9004d;
+        transform: scale(1.1);
+      }
+    }
+    .contactForm {
+      > p {
+        transform: translateX(-700px);
+        animation: pMove ease-out infinite forwards 20s;
+
+        @keyframes pMove {
+          to {
+            transform: translateX(1300px);
+          }
+        }
+      }
+      .form-control-lg {
+        border: 1px solid rgb(182, 173, 173);
+        transition: 0.4s;
+        &:hover {
+          border: 1px solid red;
+        }
+      }
+      button {
+        background-image: linear-gradient(
+          to right,
+          rgb(247, 30, 6),
+          rgb(239, 9, 103)
+        );
+      }
+    }
+    > footer {
+      > figure > img {
+        border-radius: 50%;
+      }
+      .social {
+        > ul {
+          > li {
+            min-width: 60px;
+            min-height: 60px;
+            border-radius: 50%;
+            > a {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              position: relative;
+              border: 1px solid transparent;
+              color: #fff;
+              transition: 0.4s;
+              bdrs50p &:hover {
+                background-color: #fff;
+                border: 1px solid red;
+                color: #151616;
+              }
+              > i {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                transform: translate(30%, 30%);
+                display: flex;
               }
             }
           }
