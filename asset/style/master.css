@@ -448,8 +448,8 @@ main .about .skill > .fullSkill > .fillSkill {
   width: 0%;
   height: 100%;
   background-image: linear-gradient(to right bottom, rgb(247, 30, 6), rgb(239, 9, 103));
-  -webkit-animation: skill alternate forwards 4s 2s;
-          animation: skill alternate forwards 4s 2s;
+  -webkit-animation: skill alternate forwards 6s 2s;
+          animation: skill alternate forwards 6s 2s;
 }
 @-webkit-keyframes skill {
   to {
