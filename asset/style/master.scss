@@ -59,13 +59,13 @@ main {
             left: 0px;
             border-top: 2px solid white;
             visibility: hidden;
-            display: none;
             background-color: #616161;
             > li {
               list-style-type: none;
               &:hover {
                 background-color: rgba(245, 245, 245, 0.442);
                 border-radius: 20px;
+                visibility: visible;
               }
               > a {
                 text-decoration: none;

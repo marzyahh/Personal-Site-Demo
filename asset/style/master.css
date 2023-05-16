@@ -51,7 +51,6 @@ main .wrapper .head > .list .listIcon > .submenu {
   left: 0px;
   border-top: 2px solid white;
   visibility: hidden;
-  display: none;
   background-color: #616161;
 }
 main .wrapper .head > .list .listIcon > .submenu > li {
@@ -60,6 +59,7 @@ main .wrapper .head > .list .listIcon > .submenu > li {
 main .wrapper .head > .list .listIcon > .submenu > li:hover {
   background-color: rgba(245, 245, 245, 0.442);
   border-radius: 20px;
+  visibility: visible;
 }
 main .wrapper .head > .list .listIcon > .submenu > li > a {
   text-decoration: none;
