@@ -6,6 +6,10 @@
 
 - Developed by Marzieh Hoseini
 - <img width="703" alt="about" src="https://github.com/marzyahh/Personal-Site-Demo/assets/47387526/836ca148-a87b-4be8-ae3b-b8f2c27df9cd">
+- <img width="696" alt="skills" src="https://github.com/marzyahh/Personal-Site-Demo/assets/47387526/2ad7ec81-b158-45ce-8aa7-869e340ebb1d">
+- <img width="702" alt="portfolio" src="https://github.com/marzyahh/Personal-Site-Demo/assets/47387526/0ee71ead-5aeb-42cc-ab00-8184e66c7d50">
+
+
 
 - Created - 2023
 
