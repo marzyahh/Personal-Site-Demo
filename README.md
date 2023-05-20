@@ -5,6 +5,7 @@
 - [Demo Project](https://marzyahh.github.io/Personal-Site-Demo/)
 
 - Developed by Marzieh Hoseini
+- <img width="703" alt="about" src="https://github.com/marzyahh/Personal-Site-Demo/assets/47387526/836ca148-a87b-4be8-ae3b-b8f2c27df9cd">
 
 - Created - 2023
 
