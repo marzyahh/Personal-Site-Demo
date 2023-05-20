@@ -10,4 +10,4 @@
 
 - Role - Frontend
 
-- How to reach me : with my [instagram](https://www.instagram.com/marzieh_hoseini_web) and [linkedin](https://www.linkedin.com/in/marzyahh)
+- How to reach me : with my [instagram](https://www.instagram.com/marzieh_hoseini_web) and [linkedin](https://www.linkedin.com/in/marzieh-hooseini-5a47a6177/)
